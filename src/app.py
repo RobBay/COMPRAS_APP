@@ -1,12 +1,6 @@
-cat << 'EOF' > app.py
-from flask import Flask
+from src import create_app
 
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "¡Hola! Tu servidor de Flask está funcionando correctamente. 🚀"
+app = create_app()
 
 if __name__ == "__main__":
     app.run(debug=True)
-EOF
